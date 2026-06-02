@@ -7,18 +7,17 @@ using UnityEngine.UI;
 
 public class GameManagerX : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI gameOverText;
-    public TextMeshProUGUI timer;
-    public GameObject titleScreen;
-    public Button restartButton; 
-
-    public List<GameObject> targetPrefabs;
+    [SerializeField]private TextMeshProUGUI scoreText;
+    [SerializeField]private TextMeshProUGUI gameOverText;
+    [SerializeField]private TextMeshProUGUI timer;
+    [SerializeField]private GameObject titleScreen;
+    [SerializeField]private Button restartButton; 
+    [SerializeField]private List<GameObject> targetPrefabs;
 
     private int score;
     private float spawnRate = 1.5f;
     public bool isGameActive;
-    public int time = 5;
+    [SerializeField]private int time = 5;
     private float spaceBetweenSquares = 2.5f; 
     private float minValueX = -3.75f; //  x value of the center of the left-most square
     private float minValueY = -3.75f; //  y value of the center of the bottom-most square
